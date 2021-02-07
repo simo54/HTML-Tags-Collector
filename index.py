@@ -1,6 +1,6 @@
 import requests
 import validators
-
+from bs4 import BeautifulSoup
 from tkinter import *
 
 # ================ GUI Specifications ================ #
@@ -12,9 +12,14 @@ root.geometry("600x300")
 ##################### FUNCTIONALITIES #####################
 
 def start():
-    url = validators.url(input_url.get())
-    if url == True:
+    url = input_url.get()
+    validation = validators.url(url)
+
+    if validation == True:
         print('Works')
+        f = requests.get(url)
+        # soup = BeautifulSoup(requests.get(url))
+        print(f.text)
     else:
         print("Please insert a valid URL")
 
