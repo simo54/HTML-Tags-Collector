@@ -1,24 +1,33 @@
 import requests
+import validators
+
 from tkinter import *
 
+# ================ GUI Specifications ================ #
 root = Tk()
 root.title("Test")
 root.geometry("600x300")
 
-##################### CREATING WIDGETS #####################
-button_intro = Button(root, text="hello!")
-button_quit = Button(root, text="Quit", command=root.quit)
-
-input_url = Entry(root, width=50)
 
 ##################### FUNCTIONALITIES #####################
 
+def start():
+    url = validators.url(input_url.get())
+    if url == True:
+        print('Works')
+    else:
+        print("Please insert a valid URL")
+
+
+##################### CREATING WIDGETS #####################
+button_start = Button(root, text="Start", command=start)
+button_quit = Button(root, text="Quit", command=root.quit)
+input_url = Entry(root, width=50)
 
 ##################### DISPLAYING WIDGETS #####################
-button_intro.pack()
-button_quit.pack()
+button_start.pack()
 input_url.pack()
-
+button_quit.pack()
 
 # ================ Runner ================ #
 root.mainloop()
