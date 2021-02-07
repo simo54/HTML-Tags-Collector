@@ -20,7 +20,6 @@ y = (screen_height / 2)-(window_height / 2)
 
 root.geometry(f'{window_width}x{window_height}+{int(x)}+{int(y)}')
 
-
 ##################### FUNCTIONALITIES #####################
 
 
@@ -45,12 +44,13 @@ def start():
             boxText.insert(0, uniqueTag + ", ")
 
     else:
-        print("Please insert a valid URL")
+        messagebox.showinfo(
+            "WARNING", "Please enter a valid url")
 
 
 def popup():
     messagebox.showinfo(
-        "Credits", "This script can be used/modified/implemented/tested with a free license use. \n\nAuthor: simo54 => https://github.com/simo54")
+        "Credits", "This script can be used/modified/implemented/tested for free. \n\nAuthor: simo54 => https://github.com/simo54")
 
 ##################### CREATING WIDGETS #####################
 
