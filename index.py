@@ -20,7 +20,8 @@ def start():
         print('Works')
         f = requests.get(url)
         soup = BeautifulSoup(f.text, 'html.parser')
-        print(soup.prettify())
+        for tag in soup.find_all():
+            print(tag.name)
     else:
         print("Please insert a valid URL")
 
