@@ -1,5 +1,6 @@
 import requests
 import validators
+import html.parser
 from bs4 import BeautifulSoup
 from tkinter import *
 
@@ -8,8 +9,8 @@ root = Tk()
 root.title("Test")
 root.geometry("600x300")
 
-
 ##################### FUNCTIONALITIES #####################
+
 
 def start():
     url = input_url.get()
@@ -18,8 +19,8 @@ def start():
     if validation == True:
         print('Works')
         f = requests.get(url)
-        # soup = BeautifulSoup(requests.get(url))
-        print(f.text)
+        soup = BeautifulSoup(f.text, 'html.parser')
+        print(soup.prettify())
     else:
         print("Please insert a valid URL")
 
