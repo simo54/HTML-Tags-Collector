@@ -6,7 +6,7 @@ from tkinter import messagebox, Tk, Label, Button, Entry, Frame
 # ================ GUI Specifications ================ #
 
 root = Tk()
-root.title("Test")
+root.title("Tags Collector")
 
 # ================ Centering GUI on launch ================ #
 window_width = 500
@@ -44,8 +44,7 @@ def start():
             boxText.insert(0, uniqueTag + ", ")
 
     else:
-        messagebox.showinfo(
-            "WARNING", "Please enter a valid url")
+        messagebox.showinfo("WARNING", "Please enter a valid url")
 
 
 def popup():
@@ -64,12 +63,13 @@ countBox = Entry(root, width=70)
 
 ##################### DISPLAYING WIDGETS #####################
 
-button_start.pack()
-input_url.pack()
-button_quit.pack()
-button_credits.pack()
-boxText.pack()
-countBox.pack()
+input_url.grid(column=1, row=1)
+button_start.grid(column=4, row=1)
+boxText.grid(column=1, row=4)
+countBox.grid(column=1, row=5)
+button_credits.grid(column=1, row=6)
+button_quit.grid(column=1, row=8)
+
 
 # ================ Runner ================ #
 
