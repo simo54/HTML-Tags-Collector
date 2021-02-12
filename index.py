@@ -1,7 +1,7 @@
 import requests
 import validators
 from bs4 import BeautifulSoup
-from tkinter import messagebox, Tk, Label, Button, Entry, Frame
+from tkinter import Button, Entry, Frame, Label, Text, Tk, messagebox
 
 # ================ GUI Specifications ================ #
 
@@ -36,12 +36,12 @@ def start():
             rawtagsList.append(tag.name)
 
         countTotalTags = {i: rawtagsList.count(i) for i in rawtagsList}
-        countBox.insert(0, countTotalTags)
+        countBox.insert(1.0, countTotalTags)
 
         cleanList = list(dict.fromkeys(rawtagsList))
 
         for uniqueTag in cleanList:
-            boxText.insert(0, uniqueTag + ", ")
+            boxText.insert(1.0, uniqueTag + ", ")
 
     else:
         messagebox.showinfo("WARNING", "Please enter a valid url")
@@ -58,8 +58,8 @@ button_start = Button(root, text="Start", padx=10, pady=5, command=start)
 button_quit = Button(root, text="Quit", padx=10, pady=5, command=root.quit)
 input_url = Entry(root, width=70)
 button_credits = Button(root, text="Credits", padx=10, pady=5, command=popup)
-boxText = Entry(root, width=70)
-countBox = Entry(root, width=70)
+boxText = Text(root, width=30, height=2)
+countBox = Text(root, width=30, height=2)
 labelTagsList = Label(root, text="Tags used")
 labelCountTags = Label(root, text="Counting Tags")
 labelInfo = Label(root, text="Insert your link below")
