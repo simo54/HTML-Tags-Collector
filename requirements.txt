@@ -1,0 +1,4 @@
+beautifulsoup4==4.9.3
+validators==0.18.2
+requests==2.25.1
+tkinter==8.6
