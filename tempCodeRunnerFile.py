@@ -1,5 +1,1 @@
-input_url.pack()
-# button_quit.pack()
-# button_credits.pack()
-# boxText.pack()
-# countBox.pack()
+Entry

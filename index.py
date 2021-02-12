@@ -60,15 +60,22 @@ input_url = Entry(root, width=70)
 button_credits = Button(root, text="Credits", padx=10, pady=5, command=popup)
 boxText = Entry(root, width=70)
 countBox = Entry(root, width=70)
+labelTagsList = Label(root, text="Tags used")
+labelCountTags = Label(root, text="Counting Tags")
+labelInfo = Label(root, text="Insert your link below")
 
 ##################### DISPLAYING WIDGETS #####################
 
 input_url.grid(column=1, row=1)
-button_start.grid(column=4, row=1)
+button_start.grid(column=2, row=1)
+
+labelTagsList.grid(column=1, row=3, pady=5)
 boxText.grid(column=1, row=4)
-countBox.grid(column=1, row=5)
-button_credits.grid(column=1, row=6)
-button_quit.grid(column=1, row=8)
+
+labelCountTags.grid(column=1, row=7, pady=5)
+countBox.grid(column=1, row=8)
+button_credits.grid(column=2, row=9)
+button_quit.grid(column=2, row=10)
 
 
 # ================ Runner ================ #
