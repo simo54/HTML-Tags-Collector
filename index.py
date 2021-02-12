@@ -9,8 +9,8 @@ root = Tk()
 root.title("Tags Collector")
 
 # ================ Centering GUI on launch ================ #
-window_width = 500
-window_height = 500
+window_width = 510
+window_height = 250
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -66,16 +66,17 @@ labelInfo = Label(root, text="Insert your link below")
 
 ##################### DISPLAYING WIDGETS #####################
 
-input_url.grid(column=1, row=1)
+labelInfo.grid(column=1, row=0)
+input_url.grid(column=1, row=1, padx=10)
 button_start.grid(column=2, row=1)
 
 labelTagsList.grid(column=1, row=3, pady=5)
-boxText.grid(column=1, row=4)
+boxText.grid(column=1, row=4, padx=10)
 
 labelCountTags.grid(column=1, row=7, pady=5)
-countBox.grid(column=1, row=8)
-button_credits.grid(column=2, row=9)
-button_quit.grid(column=2, row=10)
+countBox.grid(column=1, row=8, padx=10)
+button_credits.grid(column=1, row=9, pady=10)
+button_quit.grid(column=2, row=9, pady=10)
 
 
 # ================ Runner ================ #
