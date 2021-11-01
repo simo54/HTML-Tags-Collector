@@ -1,4 +1,4 @@
-# Tags Collecter GUI
+# Tags Collector GUI
 
 This is a GUI developed with Python and Tkinter module and will help get html tags of any url provided.
 
