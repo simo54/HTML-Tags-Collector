@@ -22,7 +22,6 @@ root.geometry(f'{window_width}x{window_height}+{int(x)}+{int(y)}')
 
 ##################### FUNCTIONALITIES #####################
 
-
 def start():
     url = input_url.get()
     validation = validators.url(url)
@@ -46,13 +45,11 @@ def start():
     else:
         messagebox.showinfo("WARNING", "Please enter a valid url")
 
-
 def popup():
     messagebox.showinfo(
         "Credits", "This script can be used/modified/implemented/tested for free. \n\nAuthor: simo54 => https://github.com/simo54")
 
 ##################### CREATING WIDGETS #####################
-
 
 button_start = Button(root, text="Start", padx=10, pady=5, command=start)
 button_quit = Button(root, text="Quit", padx=10, pady=5, command=root.quit)
@@ -77,7 +74,6 @@ labelCountTags.grid(column=1, row=7, pady=5)
 countBox.grid(column=1, row=8, padx=10)
 button_credits.grid(column=1, row=9, pady=10)
 button_quit.grid(column=2, row=9, pady=10)
-
 
 # ================ Runner ================ #
 
